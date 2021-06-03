@@ -5,14 +5,23 @@
     <title>サイトタイトル</title>
     <meta name="description" content="ディスクリプションを入力">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <!-- [if lt IE 9] -->
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <!-- [endif] -->
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script>
+        ScrollReveal().reveal('.building-cell'{
+            duration: 800, // アニメーションの完了にかかる時間
+            viewFactor: 0.2, // 0~1,どれくらい見えたら実行するか
+            reset: true   // 何回もアニメーション表示するか
+        });
+    </script> -->
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+    <script src="assets/js/main.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <style>
-        *,
+        /* *,
         *:before,
         *:after {
             -webkit-box-sizing: inherit;
@@ -96,21 +105,12 @@
         
         .col {
             text-align: center;
-        }
-
-        /*---これ以降はオリジナル作成---*/
-        .nav {
-            border-left: thick solid black;
-            padding-left: 1px;
-            border-width: 1px;          /*線の太さ*/
-        }
-        .nav_list {
-            list-style: none;           /*リストの黒点を非表示*/
-        }
+        } */
     </style>
 </head>
 <body>
     <!-- --- header----->
+
     <nav class="nav">
         <ul class="nav_list">
             <li class="nav_item">
@@ -160,10 +160,21 @@
     <div class="col-wrap col3-wrap col-wrap_onimage">
         <div class="col">
             <a href="https://nagoya-develop.com"> 
-                <img class="w100" src="images/mitsui-nagoya-kita.jpg" alt="人工知能" width="180" height="270" />
+                <img class="w100" src="images/mitsui-nagoya-kita.jpg" alt="機械学習" width="180" height="270" /> 
             </a> 
-            <a href="https://nagoya-develop.com" class="btn btn-svg">
-                <svg>
+            <a href="https://nagoya-develop.com" class="btn btn-svg"> 
+                <svg> 
+                    <rect x="2" y="2" rx="0" fill="none" width="200" height="50"></rect> 
+                </svg> 
+                <span>超高層ビル</span> 
+            </a>
+        </div>
+        <div class="col">
+            <a href="https://nagoya-develop.com"> 
+                <img class="w100" src="images/mitsui-nagoya-kita.jpg" alt="ロボット" width="180" height="270" /> 
+            </a> 
+            <a href="https://nagoya-develop.com" class="btn btn-svg"> 
+                <svg> 
                     <rect x="2" y="2" rx="0" fill="none" width="200" height="50"></rect> 
                 </svg> 
                 <span>超高層ビル</span> 
@@ -191,9 +202,58 @@
                 <span>超高層ビル</span> 
             </a>
         </div>
+        <div class="building-cell">
+            <img class="background-img" src="images/pic-mitsui-nagoya-kita.jpg" alt="三井ビルディング名古屋北館"/>
+            <p class="name">三井ビルディング名古屋北館</p>
+        </div>
     </div>
 
-    <div>
-
-    </div>
+    <div id="app">
+        <template>
+          <transition>
+            <div v-show="visible">
+              <h1 id="header-logo">ここがフェードイン・アウトするよ</h1>
+            </div>
+          </transition>
+      
+          <p>フェー</p>
+          <p>フェー</p>
+          <p>フェー</p>
+          <p>フェー</p>
+          <p>フェー</p>
+          <p>フェー</p>
+          <p>フェー</p>
+          <p>フェー</p>
+          <p>ドイン</p>
+          <p>ドイン</p>
+          <p>ドイン</p>
+          <p>ドイン</p>
+          <p>ドイン</p>
+          <p>ドイン</p>
+          <p>ドイン</p>
+          <p>ドイン</p>
+          <p>ドイン</p>
+          <p>アウト</p>
+          <p>アウト</p>
+          <p>アウト</p>
+          <p>アウト</p>
+          <p>アウト</p>
+          <p>アウト</p>
+          <p>アウト</p>
+          <p>アウト</p>
+          <p>アウト</p>
+          <p>アウト</p>
+          <p>するよ</p>
+          <p>するよ</p>
+          <p>するよ</p>
+          <p>するよ</p>
+          <p>するよ</p>
+          <p>するよ</p>
+          <p>するよ</p>
+          <p>するよ</p>
+          <p>するよ</p>
+          <p>するよ</p>
+          <p>するよ</p>
+        </template>
+      </div>
 </body>
