@@ -1,259 +1,77 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>サイトタイトル</title>
-    <meta name="description" content="ディスクリプションを入力">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- [if lt IE 9] -->
-    <!-- [endif] -->
-    <!-- <script src="main.js"></script> -->
-    <!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    <script>
-        ScrollReveal().reveal('.building-cell'{
-            duration: 800, // アニメーションの完了にかかる時間
-            viewFactor: 0.2, // 0~1,どれくらい見えたら実行するか
-            reset: true   // 何回もアニメーション表示するか
-        });
-    </script> -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>skyscraperNAGOYA</title>
+  <link href="./assets/css/style.css" rel="stylesheet" type="text/css">
+  <link href="./assets/css/fadein.css" rel="stylesheet" type="text/css">
 
-    <script type="module" src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
-    <script src="assets/js/main.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-    <style>
-        /* *,
-        *:before,
-        *:after {
-            -webkit-box-sizing: inherit;
-            box-sizing: inherit;
-        }
-        
-        html {
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            font-size: 62.5%;
-        }
-        
-        body {
-            padding: 30px;
-        }
-        
-        .btn,
-        a.btn,
-        button.btn {
-            font-size: 1.6rem;
-            font-weight: 700;
-            line-height: 1.5;
-            position: relative;
-            display: inline-block;
-            padding: 1rem 4rem;
-            cursor: pointer;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            -webkit-transition: all 0.3s;
-            transition: all 0.3s;
-            text-align: center;
-            vertical-align: middle;
-            text-decoration: none;
-            letter-spacing: 0.1em;
-            color: #212529;
-            border-radius: 0.5rem;
-        }
-        
-        a.btn-svg {
-            font-weight: 700;
-            line-height: 54px;
-        
-            width: 204px;
-            height: 54px;
-            padding: 0;
-        
-            cursor: pointer;
-            text-decoration: none;
-        
-            background-color: transparent;
-        }
-        
-        a.btn-svg svg {
-            position: absolute;
-            top: 0;
-            left: 0;
-        
-            width: 100%;
-            height: 100%;
-        }
-        
-        a.btn-svg svg rect {
-            -webkit-transition: all 400ms ease;
-            transition: all 400ms ease;
-        
-            stroke: #000;
-            stroke-width: 2;
-            stroke-dasharray: 200px, 16px;
-            stroke-dashoffset: 70px;
-        }
-        
-        a.btn-svg:hover svg rect {
-            stroke-dashoffset: 284px;
-        }
-        
-        a.btn-svg span {
-            color: #000;
-        }
-        
-        .col {
-            text-align: center;
-        } */
-    </style>
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/scrollanime.js" type="text/javascript"></script>
 </head>
 <body>
-    <!-- --- header----->
+  <!-- ここからは、使用方法の概要の位置づけ -->
+  <section class="sect01">
+    <p>名古屋の高層ビルの世界へ！</p>
+    <p class="arrow"><span></span><span></span><span></span></p>
+  </section>
 
+  <section class="sect02">
+    <!-- <p class="scrollanime">フェードイン</p>
+    <div class="scrollanime"><img src="./images/image00.jpg"></div>
+    <p class="scrollanime updown">上から下へフェードイン</p>
+    <div class="scrollanime updown"><img src="./images/image01.jpg"></div>
+    <p class="scrollanime downup">下から上へフェードイン</p>
+    <div class="scrollanime downup"><img src="./images/image02.jpg"></div>
+    <p class="scrollanime slide-right">右から左へフェードイン</p>
+    <div class="scrollanime slide-right"><img src="./images/image03.jpg"></div>
+    <p class="scrollanime slide-left">左から右へフェードイン</p>
+    <div class="scrollanime slide-left"><img src="./images/image04.jpg"></div>
+    <p class="scrollanime downup">下から上へフェードイン</p>
+    <div class="scrollanime downup"><img src="./images/pic-mitsui-nagoya-kita.jpg">  -->
+  </section>
+  <!-- ここまでは、使用方法の概要の位置づけ -->
+
+  <section class="sec01">
     <nav class="nav">
-        <ul class="nav_list">
-            <li class="nav_item">
-                <a href="https://nagoya-develop.com" class="nav__link nav__link-body is-current">TOP</a>
-            </li>
-            <li class="nav_item">
-                <a href="https://nagoya-develop.com" class="nav__link nav__link-shops">JRセントラルタワーズ</a>
-            </li>
-            <li class="nav_item">
-                <a href="https://nagoya-develop.com" class="nav__link nav__link-about">JRゲートタワー</a>
-            </li>
-            <li class="nav_item">
-                <a href="https://nagoya-develop.com" class="nav__link nav__link-about">JPタワー名古屋</a>
-            </li>                
-            <li class="nav_item">
-                <a href="https://nagoya-develop.com" class="nav__link nav__link-about">ルーセントタワー</a>
-            </li>                
-            <li class="nav_item">
-                <a href="https://nagoya-develop.com" class="nav__link nav__link-about">ミッドランドスクエア</a>
-            </li>                
-            <li class="nav_item">
-                <a href="https://nagoya-develop.com" class="nav__link nav__link-about">グローバルゲート</a>
-            </li>                
-            <li class="nav_item">
-                <a href="https://nagoya-develop.com" class="nav__link nav__link-about">モード学園スパイラルタワーズ</a>
-            </li>
-        </ul>
+      <ul class="nav_list">
+        <li class="nav_item">
+            <a href="https://nagoya-develop.com" class="nav__link nav__link-body is-current">TOP</a>
+        </li>
+        <li class="nav_item">
+            <a href="https://nagoya-develop.com" class="nav__link nav__link-shops">JRセントラルタワーズ</a>
+        </li>
+        <li class="nav_item">
+            <a href="https://nagoya-develop.com" class="nav__link nav__link-about">JRゲートタワー</a>
+        </li>
+        <li class="nav_item">
+            <a href="https://nagoya-develop.com" class="nav__link nav__link-about">JPタワー名古屋</a>
+        </li>                
+        <li class="nav_item">
+            <a href="https://nagoya-develop.com" class="nav__link nav__link-about">ルーセントタワー</a>
+        </li>                
+        <li class="nav_item">
+            <a href="https://nagoya-develop.com" class="nav__link nav__link-about">ミッドランドスクエア</a>
+        </li>                
+        <li class="nav_item">
+            <a href="https://nagoya-develop.com" class="nav__link nav__link-about">グローバルゲート</a>
+        </li>                
+        <li class="nav_item">
+            <a href="https://nagoya-develop.com" class="nav__link nav__link-about">モード学園スパイラルタワーズ</a>
+        </li>
+      </ul>
     </nav>
-    <!----- /header ----->
-
-    <!----- main ----->
-    <article>
-    <h1>タイトル</h1>
-    <section>
-    <h2>見出し２</h2>
-    <p>コンテンツの内容</p>
-    </section>
-    </article>
-    <!----- /main ----->
-
-    <!----- footer ----->
-    <footer>フッター</footer>
-    <!----- /footer --- -->
-    
-
-        
-    <div class="col-wrap col3-wrap col-wrap_onimage">
-        <div class="col">
-            <a href="https://nagoya-develop.com"> 
-                <img class="w100" src="images/mitsui-nagoya-kita.jpg" alt="機械学習" width="180" height="270" /> 
-            </a> 
-            <a href="https://nagoya-develop.com" class="btn btn-svg"> 
-                <svg> 
-                    <rect x="2" y="2" rx="0" fill="none" width="200" height="50"></rect> 
-                </svg> 
-                <span>超高層ビル</span> 
-            </a>
-        </div>
-        <div class="col">
-            <a href="https://nagoya-develop.com"> 
-                <img class="w100" src="images/mitsui-nagoya-kita.jpg" alt="ロボット" width="180" height="270" /> 
-            </a> 
-            <a href="https://nagoya-develop.com" class="btn btn-svg"> 
-                <svg> 
-                    <rect x="2" y="2" rx="0" fill="none" width="200" height="50"></rect> 
-                </svg> 
-                <span>超高層ビル</span> 
-            </a>
-        </div>
-        <div class="col">
-            <a href="https://nagoya-develop.com"> 
-                <img class="w100" src="images/mitsui-nagoya-kita.jpg" alt="機械学習" width="180" height="270" /> 
-            </a> 
-            <a href="https://nagoya-develop.com" class="btn btn-svg"> 
-                <svg> 
-                    <rect x="2" y="2" rx="0" fill="none" width="200" height="50"></rect> 
-                </svg> 
-                <span>超高層ビル</span> 
-            </a>
-        </div>
-        <div class="col">
-            <a href="https://nagoya-develop.com"> 
-                <img class="w100" src="images/mitsui-nagoya-kita.jpg" alt="ロボット" width="180" height="270" /> 
-            </a> 
-            <a href="https://nagoya-develop.com" class="btn btn-svg"> 
-                <svg> 
-                    <rect x="2" y="2" rx="0" fill="none" width="200" height="50"></rect> 
-                </svg> 
-                <span>超高層ビル</span> 
-            </a>
-        </div>
-        <div class="building-cell">
-            <img class="background-img" src="images/pic-mitsui-nagoya-kita.jpg" alt="三井ビルディング名古屋北館"/>
-            <p class="name">三井ビルディング名古屋北館</p>
-        </div>
+  </section>
+  
+  <section class="sec02">
+    <div class="building-cell">
+      <img class="background-img scrollanime downup" src="images/pic-mitsui-nagoya-kita.jpg" alt="名古屋三井ビルディング北館"/>
+      <p class="name scrollanime downup">名古屋三井ビルディング北館</p>
+      <p class="content scrollanime downup">2021年に竣工した、地上20階・地下2階、<br>
+                                            高さ99.75ｍ、延床面積29,450㎡の超高層ビル</p>
     </div>
+  </section>
 
-    <div id="app">
-        <template>
-          <transition>
-            <div v-show="visible">
-              <h1 id="header-logo">ここがフェードイン・アウトするよ</h1>
-            </div>
-          </transition>
-      
-          <p>フェー</p>
-          <p>フェー</p>
-          <p>フェー</p>
-          <p>フェー</p>
-          <p>フェー</p>
-          <p>フェー</p>
-          <p>フェー</p>
-          <p>フェー</p>
-          <p>ドイン</p>
-          <p>ドイン</p>
-          <p>ドイン</p>
-          <p>ドイン</p>
-          <p>ドイン</p>
-          <p>ドイン</p>
-          <p>ドイン</p>
-          <p>ドイン</p>
-          <p>ドイン</p>
-          <p>アウト</p>
-          <p>アウト</p>
-          <p>アウト</p>
-          <p>アウト</p>
-          <p>アウト</p>
-          <p>アウト</p>
-          <p>アウト</p>
-          <p>アウト</p>
-          <p>アウト</p>
-          <p>アウト</p>
-          <p>するよ</p>
-          <p>するよ</p>
-          <p>するよ</p>
-          <p>するよ</p>
-          <p>するよ</p>
-          <p>するよ</p>
-          <p>するよ</p>
-          <p>するよ</p>
-          <p>するよ</p>
-          <p>するよ</p>
-          <p>するよ</p>
-        </template>
-      </div>
+
 </body>
+</html>
