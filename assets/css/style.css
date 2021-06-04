@@ -3,6 +3,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: "M PLUS Rounded 1c";	
+	background-color: #000;
 }
 
 html {
@@ -44,7 +45,6 @@ html {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #000;
 }
 .sec02 p {
 	height: 78px;
@@ -116,28 +116,29 @@ span:nth-of-type(3) {
 }
   
 .building-cell {
+	width: 100%;
 	position: relative;
 }
   
 .name {
 	position: absolute;
-	top: 7%;
+	top: 5%;
 	left: 5%;
 	transform: translate(-50%, -50%);
 	margin: 0;
 	padding: 0;
-	font-size: 4vw;	/*文章が画面全体の10%に収まる大きさに設定*/
+	font-size: 5vw;	/*文章が画面全体の10%に収まる大きさに設定*/
 	color: white;
 }
 
 .content {
 	position: absolute;
-	top: 20%;
+	top: 15%;
 	left: 7%;
 	transform: translate(-50%, -50%);
 	margin: 0;
 	padding: 0;
-	font-size: 3vw;	/*文章が画面全体の10%に収まる大きさに設定*/
+	font-size: 4vw;	/*文章が画面全体の10%に収まる大きさに設定*/
 	color: white;
 }
 
