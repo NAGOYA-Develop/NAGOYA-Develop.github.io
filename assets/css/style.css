@@ -119,26 +119,50 @@ span:nth-of-type(3) {
 	width: 100%;
 	position: relative;
 }
-  
-.name {
-	position: absolute;
+
+.name-left {
 	top: 5%;
 	left: 5%;
-	transform: translate(-50%, -50%);
 	margin: 0;
 	padding: 0;
+	position: absolute;
+	transform: translate(-50%, -50%);
 	font-size: 5vw;	/*文章が画面全体の10%に収まる大きさに設定*/
 	color: white;
 }
 
-.content {
+.name-right {
+	top: 5%;
+	right: 5%;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	font-size: 5vw;	/*文章が画面全体の10%に収まる大きさに設定*/
+	color: white;
+}
+
+.content-left {
 	position: absolute;
 	top: 15%;
 	left: 7%;
 	transform: translate(-50%, -50%);
-	margin: 0;
-	padding: 0;
+	margin: 1% 2%;
+	padding: 1% 2%;
 	font-size: 4vw;	/*文章が画面全体の10%に収まる大きさに設定*/
 	color: white;
+	background-color: rgba(150, 150, 150, 0.5);
+}
+
+.content-right {
+	position: absolute;
+	top: 15%;
+	right: 7%;
+	transform: translate(-50%, -50%);
+	margin: 1% 2%;
+	padding: 1% 2%;
+	font-size: 4vw;	/*文章が画面全体の10%に収まる大きさに設定*/
+	color: white;
+	background-color: rgba(150, 150, 150, 0.5);
 }
 
